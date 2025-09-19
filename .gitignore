@@ -1,0 +1,12 @@
+# macOS / Windows junk
+.DS_Store
+Thumbs.db
+
+# Node / build stuff (if you add tools later)
+node_modules/
+dist/
+build/
+
+# environment secrets
+.env
+.netlify/
