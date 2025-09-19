@@ -2,23 +2,23 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "camo-assets/camo-imgs"     # where uploads are saved in the repo
-public_folder: "/camo-assets/camo-imgs"   # how the site references them
+media_folder: "camo-assets/camo-imgs"      # where files are stored in the repo
+public_folder: "/camo-assets/camo-imgs"    # how the site references them
+
+site_url: "https://camoelectricllc.netlify.app"
+logo_url:  "https://camoelectricllc.netlify.app/camo-assets/camo-imgs/Camo%20Electric%20Logo.png"
 
 collections:
   - name: "gallery"
     label: "Gallery"
-    files:
-      - file: "content/gallery.json"
-        label: "Projects"
-        name: "projects"
-        fields:
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            fields:
-              - { label: Title,     name: title,    widget: string }
-              - { label: Category,  name: category, widget: select, options: [residential, commercial, restaurants, lighting, institutional] }
-              - { label: Description, name: desc,   widget: text }
-              - { label: Image,     name: image,    widget: image }
-              - { label: Alt Text,  name: alt,      widget: string }
+    label_singular: "Photo"
+    folder: "admin/content/gallery"   # CMS will create files here
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "desc", widget: "text", required: false }
+      - { label: "Categories", name: "categories", widget: "select", multiple: true, options: ["residential","commercial","restaurants","lighting","institutional"] }
