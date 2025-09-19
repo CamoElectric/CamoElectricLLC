@@ -3,47 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Camo Electric LLC</title>
-  <meta name="description" content="Licensed Oklahoma electricians for residential, commercial & maintenance. Panels, rewires, lighting, EV chargers & emergency service. Call (405) 334-6105.">
-  <link rel="canonical" href="https://camoelectricllc.netlify.app/THIS-PAGE.html">
-  <meta property="og:title" content="Camo Electric — Trusted Electricians in Oklahoma">
-  <meta property="og:description" content="Panels, lighting, rewires, EV chargers & more. Honest, reliable, local.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://camoelectricllc.netlify.app/THIS-PAGE.html">
-  <meta property="og:image" content="https://camoelectricllc.netlify.app/camo-assets/camo-imgs/social-share.jpg">
-  <link rel="stylesheet" href="camo-assets/camo-css/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"/>
-  <link rel="javascript" href="../CamoElectricLLC.com/camo-assets/camo-js/main.js" />
-  <script type="application/ld+json">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
+<title>Camo Electric LLC</title>
+<meta name="description" content="Licensed Oklahoma electricians for residential, commercial & maintenance. Panels, rewires, lighting, EV chargers & emergency service. Call (405) 334-6105.">
+<link rel="canonical" href="https://camoelectricllc.netlify.app/">
+<meta property="og:title" content="Camo Electric — Trusted Electricians in Oklahoma">
+<meta property="og:description" content="Panels, lighting, rewires, EV chargers & more. Honest, reliable, local.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://camoelectricllc.netlify.app/">
+<meta property="og:image" content="https://camoelectricllc.netlify.app/camo-assets/camo-imgs/social-share.jpg">
+
+<link rel="stylesheet" href="camo-assets/camo-css/index.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXX');
-  </script>
-<!-- Netlify Identity widget -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  (function () {
-    if (!window.netlifyIdentity) return;
-
-    // If the URL has an invite or confirmation token, open the widget
-    if (/#(invite|confirmation)_token=/.test(location.hash)) {
-      window.netlifyIdentity.open('signup');
-    }
-
-    // After login/signup, go straight to the CMS
-    window.netlifyIdentity.on('login', () => {
-      window.location.href = '/admin/';
-    });
-    window.netlifyIdentity.on('signup', () => {
-      window.location.href = '/admin/';
-    });
-  })();
 </script>
 
+<!-- JSON-LD: Business -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Electrician",
@@ -63,6 +45,17 @@
   "sameAs": ["https://www.facebook.com/p/Camo-Electric-100063944713373/"]
 }
 </script>
+
+<!-- Invite/confirmation/recovery redirect: KEEP ON HOMEPAGE -->
+<script>
+  (function () {
+    var h = window.location.hash || "";
+    if (/#(?:invite|confirmation|recovery)_token=/.test(h)) {
+      window.location.replace("/admin/" + h);
+    }
+  })();
+</script>
+
 
 </head>
 
@@ -486,5 +479,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </footer>
+
 </body>
 </html>
