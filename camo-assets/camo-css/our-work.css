@@ -383,20 +383,49 @@ body {
 }
 
 @media (max-width: 350px){
-  #primary-nav.nav-links a,
-  #primary-nav.nav-links .services-trigger {
-    font-size: clamp(0.8rem, 3.4vw, 1rem);
-  }
+/* MOBILE DRAWER: make the Services submenu flow under its trigger */
+#primary-nav .dropdown {
+  position: static;              /* no positioning tricks */
 }
 
-#primary-nav .dropdown-content {
-  position: static;
-  display: none;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  margin: 6px 0 0 8px;
-  padding: 6px 0;
-  background: #000;
+#primary-nav .dropdown-content{
+  display: none;                 /* hidden by default */
+  position: static;              /* sit in normal flow under the trigger */
+  margin: 6px 0 0 0;
+  padding: 4px 0 4px 10px;       /* small indent */
+  background: transparent;       /* no black pill background */
+  border: 0;
+  box-shadow: none;
+  list-style: none;
+}
+
+#primary-nav .dropdown.open > .dropdown-content{
+  display: block;                /* show when .open is toggled by JS */
+}
+
+/* links inside the submenu: full-width rows and a bit indented */
+#primary-nav .dropdown-content li a{
+  display: block;
+  padding: 10px 8px 10px 18px;   /* extra left padding for hierarchy feel */
+  color: #fff;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+#primary-nav .dropdown-content li a:hover{
+  color: #ff5500;
+  border-left-color: #ff5500;    /* nice visual cue */
+  background: rgba(255,255,255,.05);
+}
+
+/* optional: rotate the caret when open */
+#primary-nav .services-trigger::after{
+  content: "▾";
+  margin-left: 6px;
+  transition: transform .2s ease;
+}
+#primary-nav .dropdown.open .services-trigger::after{
+  transform: rotate(180deg);
 }
 
 .nav-links{
@@ -415,7 +444,8 @@ body {
   overflow:auto;
 }
 
-.nav-links.active{ display:flex; }
+.nav-links.active{ display:flex; }}
+
 
 .logo-container{
   height:100%;
