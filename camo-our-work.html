@@ -4,9 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Camo Electric LLC</title>
-  <link rel="stylesheet" href="camo-assets/camo-css/our-work.css" />
+  <meta name="description" content="Licensed Oklahoma electricians for residential, commercial & maintenance. Panels, rewires, lighting, EV chargers & emergency service. Call (405) 334-6105.">
+  <link rel="canonical" href="https://camoelectricllc.netlify.app/THIS-PAGE.html">
+  <meta property="og:title" content="Camo Electric — Trusted Electricians in Oklahoma">
+  <meta property="og:description" content="Panels, lighting, rewires, EV chargers & more. Honest, reliable, local.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://camoelectricllc.netlify.app/THIS-PAGE.html">
+  <meta property="og:image" content="https://camoelectricllc.netlify.app/camo-assets/camo-imgs/social-share.jpg">
+  <link rel="stylesheet" href="camo-assets/camo-css/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"/>
   <link rel="javascript" href="../CamoElectricLLC.com/camo-assets/camo-js/main.js" />
+  <script type="application/ld+json">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+  </script>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Camo Electric, LLC",
+  "url": "https://camoelectricllc.netlify.app/",
+  "telephone": "+1-405-334-6105",
+  "image": "https://camoelectricllc.netlify.app/camo-assets/camo-imgs/Camo%20Electric%20Logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "550 Illinois St",
+    "addressLocality": "Pawnee",
+    "addressRegion": "OK",
+    "postalCode": "74058",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Tulsa","Broken Arrow","Bixby","Jenks","Owasso","Sand Springs","Glenpool","Catoosa","Sapulpa","Collinsville","Coweta","Pryor","Turley","Skiatook","Claremore","Stillwater","Perkins","Morrison","Glencoe","Ripley","Cushing","Pawnee","Perry","Maramec","Cleveland","Hominy","Fairfax","Ralston","Pawhuska","Marland","Red Rock","Ponca City","Yale","Oilton","Drumright","Mannford","Westport"],
+  "sameAs": ["https://www.facebook.com/p/Camo-Electric-100063944713373/"]
+}
+</script>
+
 </head>
 <body>
 <header class="navbar" role="banner">
@@ -385,79 +422,92 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script>
-(() => {
-  const modal     = document.getElementById('projectModal');
-  const imgEl     = document.getElementById('pmImage');
-  const titleEl   = document.getElementById('pmTitle');
-  const catEl     = document.getElementById('pmCategory');
-  const descEl    = document.getElementById('pmDesc');
-  const extraEl   = document.getElementById('pmExtra');
-  const prevBtn   = modal.querySelector('.pm-prev');
-  const nextBtn   = modal.querySelector('.pm-next');
+window.initProjectModal = function () {
+  const cards = [...document.querySelectorAll('.projects-gallery .project-card')];
+  if (!cards.length) return;
 
-  const visibleCards = () =>
-    [...document.querySelectorAll('.projects-gallery .project-card:not([hidden])')];
+  const modal   = document.getElementById('pmModal');
+  const imgEl   = modal.querySelector('#pmImg');
+  const titleEl = modal.querySelector('#pmTitle');
+  const descEl  = modal.querySelector('#pmDesc');
+  const badges  = modal.querySelector('#pmBadges');
+  const prevBtn = modal.querySelector('.pm-prev');
+  const nextBtn = modal.querySelector('.pm-next');
+  const closeEls= modal.querySelectorAll('[data-close]');
 
-  let index = -1;
+  const items = cards.map(card => {
+    const img = card.querySelector('img');
+    return {
+      src: img.currentSrc || img.src,
+      alt: img.alt || '',
+      title: card.dataset.title || 'Project',
+      desc:  card.dataset.desc  || '',
+      cats: (card.dataset.category || '').split(/[, ]+/).filter(Boolean)
+    };
+  });
 
-  function openAt(i){
-    const cards = visibleCards();
-    if (!cards.length) return;
-    index = (i + cards.length) % cards.length;
-    const card = cards[index];
-    const img  = card.querySelector('img');
-
-    imgEl.src = (card.dataset.main || img?.src || '');
-    imgEl.alt = img?.alt || card.dataset.title || 'Project photo';
-
-    titleEl.textContent = card.dataset.title || 'Project';
-    catEl.textContent   = (card.dataset.category || '').replace(/\s+/g,' / ');
-    descEl.textContent  = card.dataset.desc || '';
-
-    extraEl.innerHTML = '';
-    const extras = ['location','date','crew','cost'];
-    extras.forEach(key=>{
-      const val = card.dataset[key];
-      if (val){ extraEl.hidden = false;
-        extraEl.insertAdjacentHTML('beforeend',
-          `<dt>${key[0].toUpperCase()+key.slice(1)}</dt><dd>${val}</dd>`);
-      }
-    });
-    if (!extraEl.innerHTML) extraEl.hidden = true;
-
+  let idx = 0;
+  const open = i => {
+    idx = i;
+    const it = items[idx];
+    imgEl.src = it.src; imgEl.alt = it.alt;
+    titleEl.textContent = it.title;
+    descEl.textContent  = it.desc;
+    badges.innerHTML = it.cats.map(c => `<span class="pm-badge">${c}</span>`).join('');
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(){
+  };
+  const close = () => {
     modal.setAttribute('aria-hidden','true');
     document.body.style.overflow = '';
-    index = -1;
     imgEl.src = '';
-  }
+  };
+  const next = () => { idx = (idx + 1) % items.length; open(idx); };
+  const prev = () => { idx = (idx - 1 + items.length) % items.length; open(idx); };
 
-  document.addEventListener('click', (e)=>{
-    const img = e.target.closest('.project-card img');
-    if (!img) return;
-    const cards = visibleCards();
-    const card  = img.closest('.project-card');
-    const i     = cards.indexOf(card);
-    if (i !== -1) openAt(i);
-  });
-
-  prevBtn.addEventListener('click', ()=> openAt(index - 1));
-  nextBtn.addEventListener('click', ()=> openAt(index + 1));
-
-  modal.addEventListener('click', (e)=>{
-    if (e.target.dataset.close === 'true') closeModal();
-  });
-
-  document.addEventListener('keydown', (e)=>{
+  cards.forEach((card, i) => card.addEventListener('click', () => open(i)));
+  closeEls.forEach(el => el.addEventListener('click', close));
+  modal.addEventListener('click', e => { if (e.target.classList.contains('pm-backdrop')) close(); });
+  nextBtn.addEventListener('click', e => { e.stopPropagation(); next(); });
+  prevBtn.addEventListener('click', e => { e.stopPropagation(); prev(); });
+  document.addEventListener('keydown', e => {
     if (modal.getAttribute('aria-hidden') === 'true') return;
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowLeft')  openAt(index - 1);
-    if (e.key === 'ArrowRight') openAt(index + 1);
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft')  prev();
   });
+};
+
+// run once on initial load too (in case gallery JSON already rendered)
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.initProjectModal) window.initProjectModal();
+});
+</script>
+
+<script>
+(async () => {
+  try {
+    // Bypass cache during edits
+    const res = await fetch('/content/gallery.json?_=' + Date.now());
+    const data = await res.json();
+    const container = document.querySelector('.projects-gallery');
+
+    const html = (data.projects || []).map(p => `
+      <article class="project-card"
+        data-category="${p.category || ''}"
+        data-title="${p.title || ''}"
+        data-desc="${p.desc || ''}">
+        <img src="${p.image}" alt="${p.alt || p.title || 'Project photo'}">
+      </article>
+    `).join('');
+
+    container.insertAdjacentHTML('beforeend', html);
+
+    // If you use my “Facebook-style” modal:
+    if (window.initProjectModal) window.initProjectModal();
+  } catch (e) {
+    console.error('Gallery load failed', e);
+  }
 })();
 </script>
 

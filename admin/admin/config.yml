@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "camo-assets/camo-imgs"     # where uploads are saved in the repo
+public_folder: "/camo-assets/camo-imgs"   # how the site references them
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "content/gallery.json"
+        label: "Projects"
+        name: "projects"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: Title,     name: title,    widget: string }
+              - { label: Category,  name: category, widget: select, options: [residential, commercial, restaurants, lighting, institutional] }
+              - { label: Description, name: desc,   widget: text }
+              - { label: Image,     name: image,    widget: image }
+              - { label: Alt Text,  name: alt,      widget: string }

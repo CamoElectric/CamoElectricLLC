@@ -1,67 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.camoelectricllc.com/</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.camoelectricllc.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.camoelectricllc.com/camo-our-work.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-our-work.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-services/residential.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-services/residential.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-services/commercial.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-services/commercial.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-services/maintenance.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-services/maintenance.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-about-us.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-about-us.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-contact.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-contact.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-careers.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-careers.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.camoelectricllc.com/camo-privacy-policy.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://camoelectricllc.netlify.app/camo-privacy-policy.html</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

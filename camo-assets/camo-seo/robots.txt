@@ -3,6 +3,9 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://camoelectricllc.netlify.app/sitemap.xml
+
+
 # If you ever have areas you don't want indexed, keep these handy:
 Disallow: /admin/
 Disallow: /draft/
@@ -15,4 +18,4 @@ Disallow: /*?utm_*
 Disallow: /*?fbclid=
 
 # Sitemap location (update to final domain when live)
-Sitemap: https://www.camoelectricllc.com/sitemap.xml
+Sitemap: https://www.camoelectricllc.netlify.app/sitemap.xml

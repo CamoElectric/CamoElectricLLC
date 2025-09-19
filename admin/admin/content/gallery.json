@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "title": "Kitchen Remodel – Maple Cabinets",
+      "category": "residential",
+      "desc": "Dedicated circuits, under-cabinet lighting, GFCI protection.",
+      "image": "camo-assets/camo-imgs/kitchen.jpg",
+      "alt": "Kitchen remodel with maple cabinets"
+    }
+  ]
+}
