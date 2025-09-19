@@ -23,6 +23,26 @@
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXX');
   </script>
+<!-- Netlify Identity widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  (function () {
+    if (!window.netlifyIdentity) return;
+
+    // If the URL has an invite or confirmation token, open the widget
+    if (/#(invite|confirmation)_token=/.test(location.hash)) {
+      window.netlifyIdentity.open('signup');
+    }
+
+    // After login/signup, go straight to the CMS
+    window.netlifyIdentity.on('login', () => {
+      window.location.href = '/admin/';
+    });
+    window.netlifyIdentity.on('signup', () => {
+      window.location.href = '/admin/';
+    });
+  })();
+</script>
 
 {
   "@context": "https://schema.org",
