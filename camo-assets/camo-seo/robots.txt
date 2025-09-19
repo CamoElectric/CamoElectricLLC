@@ -1,0 +1,18 @@
+# robots.txt for camoelectricllc.com
+
+User-agent: *
+Allow: /
+
+# If you ever have areas you don't want indexed, keep these handy:
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
+
+# Avoid indexing duplicate tracking URLs
+Disallow: /*?utm_*
+Disallow: /*?fbclid=
+
+# Sitemap location (update to final domain when live)
+Sitemap: https://www.camoelectricllc.com/sitemap.xml

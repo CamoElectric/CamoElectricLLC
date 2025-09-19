@@ -1,0 +1,501 @@
+/* ---------- NAVBAR ---------- */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #1c1c1c;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 5px 5px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+/* ---------- NAV LINKS CONTAINER ---------- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 40px;
+  flex-wrap: nowrap;
+  font-weight: 700;
+}
+
+.services-trigger {
+  all: unset;                  /* removes default button styles */
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 12px 4px;           /* same padding as your <a> */
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;       /* matches <a> */
+}
+
+
+/* ---------- NAV ITEMS (LINKS + DROPDOWN TRIGGERS) ---------- */
+.nav-links a,
+.nav-links .dropdown > a,
+.nav-links .dropdown > button {
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.6rem, 1vw, 1.2rem);
+
+  /* normalize vertical rhythm */
+  line-height: 1;
+  padding: 8px;
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links .dropdown > a:hover,
+.nav-links .dropdown > button:hover {
+  color: #ff5500;
+}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center; /* keeps trigger aligned with nav links */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;   /* sits directly below trigger */
+  left: 0;
+  width: 240px;
+
+  background-color: #000;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  z-index: 20;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  padding: 16px 24px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  background-color: #000;
+  border-bottom: 1px solid #ff5500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+  color: #ff5500;
+}
+
+/* Remove this if you have it */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Use this instead (your JS toggles .open) */
+.dropdown-content {
+  display: none;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static; /* let it flow in the column */
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+
+
+
+
+
+/* HIDDEN MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 20;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+
+
+
+
+
+/* LOGO & CTA */
+.logo-container,
+.cta-container {
+  flex-shrink: 0;
+  width: clamp(200px, 25vw, 350px);
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.logo-container {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(200px, 25vw, 350px); /* keep same width you were using */
+  height: 100%;
+  background-color: #000;
+}
+
+.logo {
+  width: auto;
+  max-width: 70%;  /* was 80% — now ~10% smaller */
+  height: auto;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.cta-container {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  flex-direction: column;
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: #ff5500;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  white-space:nowrap;
+  width: fit-content;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover{
+    background-color: #ffffff;
+    color: #ff5500;
+}
+
+.cta-number {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Global fix */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #000; /* full black */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* News Hero */
+.news-hero {
+  background: #000;
+  padding: 8rem 2rem 3rem; /* add top padding for navbar */
+  text-align: center;
+  color: #fff;
+}
+
+.news-hero h1 {
+  color: #ff5500;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.news-hero p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* News Feed (full width background) */
+.news-feed {
+  width: 100%;          /* full browser width */
+  background: #111;     /* dark section */
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Inner wrapper to keep posts centered */
+.news-feed-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+/* News Cards */
+.news-card {
+  background: #000;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 85, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(255, 85, 0, 0.5);
+}
+
+.news-card h2 {
+  color: #ff5500;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+/* Wrapper for Facebook embed */
+.fb-wrapper {
+  padding: 1rem;              /* space inside the news card */
+  background: #111;           /* subtle contrast */
+  border-radius: 8px;
+  max-width: 50%;             /* never wider than half the page */
+  min-width: 300px;           /* keep it readable on small screens */
+  display: flex;
+  justify-content: flex-start;/* align left */
+}
+
+/* The fb plugin itself */
+.fb-page {
+  width: 100% !important;     /* take full width of wrapper */
+}
+
+/* ---------- Footer Base ---------- */
+:root {
+  --footer-bg: #1c1c1c;
+  --footer-bottom-bg: #000;
+  --footer-text: #fff;
+  --accent: #ff5500;
+  --max: 1200px;
+}
+
+body { margin: 0; } /* remove browser default gaps */
+
+.site-footer {
+  color: var(--footer-text);
+  background: var(--footer-bg);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ---------- Content Wrapper ---------- */
+.footer-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* About | Contact | Links */
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---------- About Section ---------- */
+.footer-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+  margin: 0 0 20px;
+}
+
+.footer-about p {
+  line-height: 1.7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ---------- Contact Section ---------- */
+.footer-contact h4 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--footer-text);
+}
+
+.footer-contact address {
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.call-number {
+text-decoration: none;
+color: #ff5500;
+}
+
+/* ---------- Links Section ---------- */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* align heading and list text edges */
+  text-align: left;         /* heading + links line up together */
+  justify-self: end;        /* push block toward the right edge */
+  margin-right: 8rem;
+  line-height: 1.4;
+}
+
+.footer-links h4 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--footer-text);
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ---------- Bottom Bar ---------- */
+.footer-bottom {
+  background: var(--footer-bottom-bg);
+  width: 100%;
+}
+
+.footer-bottom-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .9rem;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+.facebook img {
+  width: 40px;   /* adjust size */
+  height: auto;  /* keeps correct aspect ratio */
+  display: inline-block;
+  transition: transform 0.2s ease;
+  margin-top: 50px;
+}
+
+.facebook img:hover {
+  transform: scale(1.1); /* fun hover grow effect */
+}
+
+.coyote-link{
+  text-decoration: none;
+  color: #39fde3;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .footer-wrap {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-links {
+    justify-self: start;  /* no forced right edge on small screens */
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
