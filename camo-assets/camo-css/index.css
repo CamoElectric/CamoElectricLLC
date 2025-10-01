@@ -603,12 +603,18 @@ html, body { overflow-x: hidden; }
     transition: none;
    }
 }
+.emergency{
+text-align: center;
+font-size: 22px;
+color: rgb(255, 255, 255);
+
+}
 
 /* REVIEW SECTION */
 .oklahoma-text {
   font-weight: 800;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: #fff;
+  color: #ff5500;
   text-align: center;
   margin: 1rem 0;
   font-family: 'Montserrat', sans-serif;
@@ -677,7 +683,7 @@ html, body { overflow-x: hidden; }
 /* SERVICES SECTION */
 
 .services {
-  background: url("../camo-imgs/House.jpg") center center / cover no-repeat;
+  background: url("../camo-imgs/house4.png") center center / cover no-repeat;
   padding: 60px 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;

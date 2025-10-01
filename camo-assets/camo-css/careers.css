@@ -483,7 +483,7 @@ body {
 .careers-hero1::before{
   content:"";
   position:absolute; inset:0;
-  background: url(../camo-imgs/camo-truck.jpg) center / cover no-repeat;
+  background: url(../camo-imgs/250923-Team5.jpg) center / cover no-repeat;
   z-index:0;
 }
 
