@@ -34,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 5px;
-  background:#000 url("../camo-imgs/camoflauge.png") left top no-repeat fixed;
+  background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") left top no-repeat fixed;
   background-size: auto;
 }
 
@@ -169,7 +169,7 @@ body {
     align-items: center;  
     display: flex;
     flex-direction: column;
-    background:#000 url("../camo-imgs/camoflauge.png") right top no-repeat fixed;
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") right top no-repeat fixed;
     background-size: auto;
 }
 
@@ -287,7 +287,7 @@ body {
     align-items:center;
     height: calc(var(--bar-h) * 0.80);;
     width:100%;
-    background:#000 url("../camo-imgs/camoflauge.png");
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   }
 
 .logo-container{
@@ -622,7 +622,7 @@ color: rgb(255, 255, 255);
 }
 
 .review-section {
-  background: url("../camo-imgs/camoflauge.png") center top repeat;
+  background: url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") center top repeat;
   background-size: auto;
   padding: 48px 0 64px;
   margin: 0;
@@ -683,7 +683,7 @@ color: rgb(255, 255, 255);
 /* SERVICES SECTION */
 
 .services {
-  background: url("../camo-imgs/house4.png") center center / cover no-repeat;
+  background: url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ House\ 4.png") center center / cover no-repeat;
   padding: 60px 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -929,7 +929,7 @@ button:hover {
 
 /* ---------- Footer Base ---------- */
 :root {
-  --footer-bg:#000 url("../camo-imgs/camoflauge.png");
+  --footer-bg:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   --footer-bottom-bg: #000;
   --footer-text: #fff;
   --accent: #ff5500;

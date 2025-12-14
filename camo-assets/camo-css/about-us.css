@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 5px;
-  background:#000 url("../camo-imgs/camoflauge.png") left top no-repeat fixed;
+  background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") left top no-repeat fixed;
   background-size: auto;
 }
 
@@ -167,7 +167,7 @@ body {
     align-items: center;  
     display: flex;
     flex-direction: column;
-    background:#000 url("../camo-imgs/camoflauge.png") right top no-repeat fixed;
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") right top no-repeat fixed;
     background-size: auto;
 }
 
@@ -291,7 +291,7 @@ body {
     align-items:center;
     height: calc(var(--bar-h) * 0.80);;
     width:100%;
-    background:#000 url("../camo-imgs/camoflauge.png");
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   }
 .logo-container{
   visibility: hidden;
@@ -470,7 +470,7 @@ body {
 .about-us-hero::before{
   content:"";
   position:absolute; inset:0;
-  background: url(../camo-imgs/250923-Team2.0.jpg) center / cover no-repeat;
+  background: url(../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Team\ 2.jpg) center / cover no-repeat;
   z-index:0;
 }
 
@@ -626,7 +626,7 @@ body {
 
 /* Circular photo using background-image for precise framing */
 .about-photo-miguel{
-  --img: url('../camo-imgs/250923-Michael5.jpg');                 /* set inline via style attr */
+  --img: url('../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Miguel\ 1.jpg');                 /* set inline via style attr */
   width: clamp(160px, 22vw, 280px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -640,7 +640,7 @@ body {
 }
 
 .about-photo-amy{
-  --img: url('../camo-imgs/amy.jpg');                 /* set inline via style attr */
+  --img: url('../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Amy.jpg');                 /* set inline via style attr */
   width: clamp(160px, 22vw, 280px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -812,7 +812,7 @@ body {
 
 /* ---------- Footer Base ---------- */
 :root {
-  --footer-bg: #000 url("../camo-imgs/camoflauge.png");
+  --footer-bg: #000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   --footer-bottom-bg: #000;
   --footer-text: #fff;
   --accent: #ff5500;

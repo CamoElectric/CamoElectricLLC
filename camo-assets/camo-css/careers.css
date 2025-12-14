@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 5px;
-  background:#000 url("../camo-imgs/camoflauge.png") left top no-repeat fixed;
+  background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") left top no-repeat fixed;
   background-size: auto;
 }
 
@@ -167,7 +167,7 @@ body {
     align-items: center;  
     display: flex;
     flex-direction: column;
-    background:#000 url("../camo-imgs/camoflauge.png") right top no-repeat fixed;
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") right top no-repeat fixed;
     background-size: auto;
 }
 
@@ -291,7 +291,7 @@ body {
     align-items:center;
     height: calc(var(--bar-h) * 0.80);;
     width:100%;
-    background:#000 url("../camo-imgs/camoflauge.png");
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   }
 .logo-container{
   visibility: hidden;
@@ -483,7 +483,7 @@ body {
 .careers-hero1::before{
   content:"";
   position:absolute; inset:0;
-  background: url(../camo-imgs/250923-Team5.jpg) center / cover no-repeat;
+  background: url(../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Team\ 1.jpg) center / cover no-repeat;
   z-index:0;
 }
 
@@ -682,7 +682,7 @@ body {
 
 /* ---------- Footer Base ---------- */
 :root {
-  --footer-bg: #000 url("../camo-imgs/camoflauge.png");
+  --footer-bg: #000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   --footer-bottom-bg: #1c1c1c;
   --footer-text: #fff;
   --accent: #ff5500;

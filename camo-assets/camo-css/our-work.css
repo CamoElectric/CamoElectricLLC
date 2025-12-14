@@ -34,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 5px;
-  background:#000 url("../camo-imgs/camoflauge.png") left top no-repeat fixed;
+  background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") left top no-repeat fixed;
   background-size: auto;
 }
 
@@ -158,7 +158,7 @@ body {
     align-items: center;  
     display: flex;
     flex-direction: column;
-    background:#000 url("../camo-imgs/camoflauge.png") right top no-repeat fixed;
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png") right top no-repeat fixed;
     background-size: auto;
 }
 
@@ -278,7 +278,7 @@ body {
     align-items:center;
     height: calc(var(--bar-h) * 0.80);;
     width:100%;
-    background:#000 url("../camo-imgs/camoflauge.png");
+    background:#000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   }
 
 .logo-container{
@@ -510,7 +510,7 @@ body {
 .our-work-banner::before{
   content:"";
   position:absolute; inset:0;
-  background-image:url("../camo-imgs/church.jpg");
+  background-image:url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Church\ 1.jpg");
   background-repeat:no-repeat;
   background-position:left 30%;      
   background-size: auto clamp(100%, calc(100% + (100vw - 1010px) * 0.01875), 115%);
@@ -731,7 +731,7 @@ body {
 
 /* ---------- Footer Base ---------- */
 :root {
-  --footer-bg: #000 url("../camo-imgs/camoflauge.png");
+  --footer-bg: #000 url("../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ BACKGROUND\ -\ Camoflauge.png");
   --footer-bottom-bg: #000;
   --footer-text: #fff;
   --accent: #ff5500;
