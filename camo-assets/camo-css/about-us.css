@@ -653,7 +653,7 @@ body {
   flex: 0 0 auto;
 }
 .about-photo-phillip{
-  --img: url('../camo-imgs/generic\ profile.png');                 /* set inline via style attr */
+  --img: url('../camo-imgs/Camo\ Electric\ -\ WEBSITE\ -\ PHOTO\ -\ Phillip.png');                 /* set inline via style attr */
   width: clamp(160px, 22vw, 280px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
